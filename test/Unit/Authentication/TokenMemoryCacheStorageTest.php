@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Authentication;
+namespace mvd\Vipps\Tests\Unit\Authentication;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\SerializerBuilder;
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Authentication\TokenMemoryCacheStorage;
-use zaporylie\Vipps\Authentication\TokenStorageInterface;
-use zaporylie\Vipps\Exceptions\Authentication\InvalidArgumentException;
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
+use mvd\Vipps\Authentication\TokenMemoryCacheStorage;
+use mvd\Vipps\Authentication\TokenStorageInterface;
+use mvd\Vipps\Exceptions\Authentication\InvalidArgumentException;
+use mvd\Vipps\Model\Authorization\ResponseGetToken;
 
 class TokenMemoryCacheStorageTest extends TestCase
 {
 
     /**
-     * @var \zaporylie\Vipps\Authentication\TokenMemoryCacheStorage
+     * @var \mvd\Vipps\Authentication\TokenMemoryCacheStorage
      */
     protected $token;
 
@@ -37,7 +37,7 @@ class TokenMemoryCacheStorageTest extends TestCase
     /**
      * @param string $time
      *
-     * @return \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @return \mvd\Vipps\Model\Authorization\ResponseGetToken
      */
     protected function getToken($time = 'now')
     {
@@ -57,7 +57,7 @@ class TokenMemoryCacheStorageTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Authentication\TokenMemoryCacheStorage
+     * @covers \mvd\Vipps\Authentication\TokenMemoryCacheStorage
      */
     public function testToken()
     {

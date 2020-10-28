@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace mvd\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestRefundPayment;
-use zaporylie\Vipps\Model\Payment\ResponseRefundPayment;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Model\Payment\RequestRefundPayment;
+use mvd\Vipps\Model\Payment\ResponseRefundPayment;
+use mvd\Vipps\Resource\HttpMethod;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class RefundPayment
@@ -16,7 +16,7 @@ class RefundPayment extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \mvd\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::POST;
 
@@ -28,10 +28,10 @@ class RefundPayment extends PaymentResourceBase
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \mvd\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $order_id
-     * @param \zaporylie\Vipps\Model\Payment\RequestRefundPayment $requestObject
+     * @param \mvd\Vipps\Model\Payment\RequestRefundPayment $requestObject
      */
     public function __construct(
         VippsInterface $vipps,
@@ -50,13 +50,13 @@ class RefundPayment extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseRefundPayment
+     * @return \mvd\Vipps\Model\Payment\ResponseRefundPayment
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseRefundPayment $responseObject */
+        /** @var \mvd\Vipps\Model\Payment\ResponseRefundPayment $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

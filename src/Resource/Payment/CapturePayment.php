@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace mvd\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestCapturePayment;
-use zaporylie\Vipps\Model\Payment\ResponseCapturePayment;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Model\Payment\RequestCapturePayment;
+use mvd\Vipps\Model\Payment\ResponseCapturePayment;
+use mvd\Vipps\Resource\HttpMethod;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class CapturePayment
@@ -16,7 +16,7 @@ class CapturePayment extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \mvd\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::POST;
 
@@ -28,10 +28,10 @@ class CapturePayment extends PaymentResourceBase
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \mvd\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $order_id
-     * @param \zaporylie\Vipps\Model\Payment\RequestCapturePayment $requestObject
+     * @param \mvd\Vipps\Model\Payment\RequestCapturePayment $requestObject
      */
     public function __construct(
         VippsInterface $vipps,
@@ -50,13 +50,13 @@ class CapturePayment extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCapturePayment
+     * @return \mvd\Vipps\Model\Payment\ResponseCapturePayment
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseCapturePayment $responseObject */
+        /** @var \mvd\Vipps\Model\Payment\ResponseCapturePayment $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

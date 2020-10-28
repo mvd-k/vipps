@@ -1,12 +1,12 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
-use zaporylie\Vipps\Model\FromStringInterface;
-use zaporylie\Vipps\Model\FromStringTrait;
-use zaporylie\Vipps\Model\ToStringInterface;
-use zaporylie\Vipps\Model\ToStringTrait;
-use zaporylie\Vipps\Model\SupportsSerializationInterface;
+use mvd\Vipps\Model\FromStringInterface;
+use mvd\Vipps\Model\FromStringTrait;
+use mvd\Vipps\Model\ToStringInterface;
+use mvd\Vipps\Model\ToStringTrait;
+use mvd\Vipps\Model\SupportsSerializationInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 class RegularCheckOutPaymentRequest implements FromStringInterface, ToStringInterface, SupportsSerializationInterface
@@ -28,14 +28,14 @@ class RegularCheckOutPaymentRequest implements FromStringInterface, ToStringInte
     protected $orderId;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus")
+     * @var \mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus
+     * @Serializer\Type("mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus")
      */
     protected $transactionInfo;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\CallbackErrorInfo
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\CallbackErrorInfo")
+     * @var \mvd\Vipps\Model\Payment\CallbackErrorInfo
+     * @Serializer\Type("mvd\Vipps\Model\Payment\CallbackErrorInfo")
      */
     protected $errorInfo;
 
@@ -56,7 +56,7 @@ class RegularCheckOutPaymentRequest implements FromStringInterface, ToStringInte
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus
+     * @return \mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus
      */
     public function getTransactionInfo()
     {
@@ -64,7 +64,7 @@ class RegularCheckOutPaymentRequest implements FromStringInterface, ToStringInte
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\CallbackErrorInfo
+     * @return \mvd\Vipps\Model\Payment\CallbackErrorInfo
      */
     public function getErrorInfo()
     {

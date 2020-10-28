@@ -1,14 +1,14 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Integration\Api;
+namespace mvd\Vipps\Tests\Integration\Api;
 
-use zaporylie\Vipps\Exceptions\VippsException;
-use zaporylie\Vipps\Model\Payment\Address;
-use zaporylie\Vipps\Model\Payment\PaymentShippingDetails;
-use zaporylie\Vipps\Model\Payment\TransactionLog;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Model\Payment\UserDetails;
-use zaporylie\Vipps\Tests\Integration\IntegrationTestBase;
+use mvd\Vipps\Exceptions\VippsException;
+use mvd\Vipps\Model\Payment\Address;
+use mvd\Vipps\Model\Payment\PaymentShippingDetails;
+use mvd\Vipps\Model\Payment\TransactionLog;
+use mvd\Vipps\Model\Payment\TransactionSummary;
+use mvd\Vipps\Model\Payment\UserDetails;
+use mvd\Vipps\Tests\Integration\IntegrationTestBase;
 
 /**
  * Class PaymentsTest
@@ -24,7 +24,7 @@ class PaymentsTest extends IntegrationTestBase
     protected $merchantSerialNumber = 'test_merchant_serial_number';
 
     /**
-     * @var \zaporylie\Vipps\Api\PaymentInterface
+     * @var \mvd\Vipps\Api\PaymentInterface
      */
     protected $api;
 
@@ -38,7 +38,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::initiatePayment()
+     * @covers \mvd\Vipps\Api\Payment::initiatePayment()
      */
     public function testValidInitiatePayment()
     {
@@ -72,7 +72,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::initiatePayment()
+     * @covers \mvd\Vipps\Api\Payment::initiatePayment()
      */
     public function testInvalidInitiatePayment()
     {
@@ -88,7 +88,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::capturePayment()
+     * @covers \mvd\Vipps\Api\Payment::capturePayment()
      */
     public function testValidCapturePayment()
     {
@@ -134,7 +134,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::cancelPayment()
+     * @covers \mvd\Vipps\Api\Payment::cancelPayment()
      */
     public function testValidCancelPayment()
     {
@@ -180,7 +180,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::refundPayment()
+     * @covers \mvd\Vipps\Api\Payment::refundPayment()
      */
     public function testValidRefundPayment()
     {
@@ -227,7 +227,7 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getOrderStatus()
+     * @covers \mvd\Vipps\Api\Payment::getOrderStatus()
      */
     public function testValidGetOrderStatus()
     {
@@ -260,8 +260,8 @@ class PaymentsTest extends IntegrationTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getPaymentDetails()
-     * @covers \zaporylie\Vipps\Model\Payment\PaymentShippingDetails::getAddress()
+     * @covers \mvd\Vipps\Api\Payment::getPaymentDetails()
+     * @covers \mvd\Vipps\Model\Payment\PaymentShippingDetails::getAddress()
      */
     public function testValidGetPaymentDetails()
     {

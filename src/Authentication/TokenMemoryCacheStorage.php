@@ -1,9 +1,9 @@
 <?php
 
-namespace zaporylie\Vipps\Authentication;
+namespace mvd\Vipps\Authentication;
 
-use zaporylie\Vipps\Exceptions\Authentication\InvalidArgumentException;
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
+use mvd\Vipps\Exceptions\Authentication\InvalidArgumentException;
+use mvd\Vipps\Model\Authorization\ResponseGetToken;
 
 /**
  * Class TokenMemoryCacheStorage
@@ -14,7 +14,7 @@ class TokenMemoryCacheStorage implements TokenStorageInterface
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @var \mvd\Vipps\Model\Authorization\ResponseGetToken
      */
     protected $token;
 

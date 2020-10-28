@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -12,21 +12,21 @@ use JMS\Serializer\Annotation as Serializer;
 class RequestRefundPayment
 {
     /**
-     * @var \zaporylie\Vipps\Model\Payment\MerchantInfo
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\MerchantInfo")
+     * @var \mvd\Vipps\Model\Payment\MerchantInfo
+     * @Serializer\Type("mvd\Vipps\Model\Payment\MerchantInfo")
      */
     protected $merchantInfo;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\Transaction
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\Transaction")
+     * @var \mvd\Vipps\Model\Payment\Transaction
+     * @Serializer\Type("mvd\Vipps\Model\Payment\Transaction")
      */
     protected $transaction;
 
     /**
      * Gets merchantInfo value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\MerchantInfo
+     * @return \mvd\Vipps\Model\Payment\MerchantInfo
      */
     public function getMerchantInfo()
     {
@@ -36,7 +36,7 @@ class RequestRefundPayment
     /**
      * Sets merchantInfo variable.
      *
-     * @param \zaporylie\Vipps\Model\Payment\MerchantInfo $merchantInfo
+     * @param \mvd\Vipps\Model\Payment\MerchantInfo $merchantInfo
      *
      * @return $this
      */
@@ -49,7 +49,7 @@ class RequestRefundPayment
     /**
      * Gets transaction value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\Transaction
+     * @return \mvd\Vipps\Model\Payment\Transaction
      */
     public function getTransaction()
     {
@@ -59,7 +59,7 @@ class RequestRefundPayment
     /**
      * Sets transaction variable.
      *
-     * @param \zaporylie\Vipps\Model\Payment\Transaction $transaction
+     * @param \mvd\Vipps\Model\Payment\Transaction $transaction
      *
      * @return $this
      */

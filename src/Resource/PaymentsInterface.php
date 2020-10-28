@@ -6,7 +6,7 @@
  * Interface which defines payments.
  */
 
-namespace zaporylie\Vipps\Resource;
+namespace mvd\Vipps\Resource;
 
 /**
  * Interface PaymentsInterface

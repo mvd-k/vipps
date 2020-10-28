@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\FetchShippingCostAndMethod;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\FetchShippingCostAndMethod;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 /**
  * Class FetchShippingCostAndMethodTest
- * @package zaporylie\Vipps\Tests\Unit\Model\Payment
- * @coversDefaultClass \zaporylie\Vipps\Model\Payment\FetchShippingCostAndMethod
+ * @package mvd\Vipps\Tests\Unit\Model\Payment
+ * @coversDefaultClass \mvd\Vipps\Model\Payment\FetchShippingCostAndMethod
  */
 class FetchShippingCostAndMethodTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\FetchShippingCostAndMethod
+     * @var \mvd\Vipps\Model\Payment\FetchShippingCostAndMethod
      */
     protected $model;
 

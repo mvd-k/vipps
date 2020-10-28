@@ -6,7 +6,7 @@
  * Interface which defines connections.
  */
 
-namespace zaporylie\Vipps;
+namespace mvd\Vipps;
 
 /**
  * Interface ConnectionInterface

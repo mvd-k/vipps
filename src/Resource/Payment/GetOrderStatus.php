@@ -1,14 +1,14 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Payment;
+namespace mvd\Vipps\Resource\Payment;
 
-use zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Model\Payment\ResponseGetOrderStatus;
+use mvd\Vipps\Resource\HttpMethod;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class GetOrderStatus
- * @package zaporylie\Vipps\Resource\Payment
+ * @package mvd\Vipps\Resource\Payment
  * @deprecated
  *   This API call allows the merchant to get the status of the last payment transaction.
  *   Primarily use of this service is meant for inApp where simple response to check order
@@ -18,7 +18,7 @@ class GetOrderStatus extends PaymentResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \mvd\Vipps\Resource\HttpMethod
      */
     protected $method = HttpMethod::GET;
 
@@ -30,7 +30,7 @@ class GetOrderStatus extends PaymentResourceBase
     /**
      * InitiatePayment constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \mvd\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $order_id
      */
@@ -41,13 +41,13 @@ class GetOrderStatus extends PaymentResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus
+     * @return \mvd\Vipps\Model\Payment\ResponseGetOrderStatus
      */
     public function call()
     {
         $response = $this->makeCall();
         $body = $response->getBody()->getContents();
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus $responseObject */
+        /** @var \mvd\Vipps\Model\Payment\ResponseGetOrderStatus $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

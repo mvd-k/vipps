@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Integration;
+namespace mvd\Vipps\Tests\Integration;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
@@ -8,9 +8,9 @@ use function GuzzleHttp\Psr7\stream_for;
 use Http\Client\Exception\HttpException;
 use Http\Client\HttpClient;
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Client;
-use zaporylie\Vipps\Tests\Unit\Authentication\TestTokenStorage;
-use zaporylie\Vipps\Vipps;
+use mvd\Vipps\Client;
+use mvd\Vipps\Tests\Unit\Authentication\TestTokenStorage;
+use mvd\Vipps\Vipps;
 
 abstract class IntegrationTestBase extends TestCase
 {
@@ -26,12 +26,12 @@ abstract class IntegrationTestBase extends TestCase
     protected $response;
 
     /**
-     * @var \zaporylie\Vipps\ClientInterface
+     * @var \mvd\Vipps\ClientInterface
      */
     protected $client;
 
     /**
-     * @var \zaporylie\Vipps\VippsInterface
+     * @var \mvd\Vipps\VippsInterface
      */
     protected $vipps;
 

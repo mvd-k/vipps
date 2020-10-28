@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
-use zaporylie\Vipps\Model\ToStringInterface;
-use zaporylie\Vipps\Model\ToStringTrait;
-use zaporylie\Vipps\Model\SupportsSerializationInterface;
+use mvd\Vipps\Model\ToStringInterface;
+use mvd\Vipps\Model\ToStringTrait;
+use mvd\Vipps\Model\SupportsSerializationInterface;
 
 class FetchShippingCostResponse implements ToStringInterface, SupportsSerializationInterface
 {
@@ -25,8 +25,8 @@ class FetchShippingCostResponse implements ToStringInterface, SupportsSerializat
     protected $orderId;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ShippingDetails[]
-     * @Serializer\Type("array<zaporylie\Vipps\Model\Payment\ShippingDetails>")
+     * @var \mvd\Vipps\Model\Payment\ShippingDetails[]
+     * @Serializer\Type("array<mvd\Vipps\Model\Payment\ShippingDetails>")
      */
     protected $shippingDetails;
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 /**
  * Class CallbackTransactionInfoStatusTest
- * @package zaporylie\Vipps\Tests\Unit\Model\Payment
- * @coversDefaultClass \zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus
+ * @package mvd\Vipps\Tests\Unit\Model\Payment
+ * @coversDefaultClass \mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus
  */
 class CallbackTransactionInfoStatusTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\CallbackTransactionInfoStatus
+     * @var \mvd\Vipps\Model\Payment\CallbackTransactionInfoStatus
      */
     protected $model;
 

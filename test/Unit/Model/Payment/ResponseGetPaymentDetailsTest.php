@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\PaymentShippingDetails;
-use zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Model\Payment\UserDetails;
-use zaporylie\Vipps\Resource\Payment\GetPaymentDetails;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\PaymentShippingDetails;
+use mvd\Vipps\Model\Payment\ResponseGetPaymentDetails;
+use mvd\Vipps\Model\Payment\TransactionSummary;
+use mvd\Vipps\Model\Payment\UserDetails;
+use mvd\Vipps\Resource\Payment\GetPaymentDetails;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseGetPaymentDetailsTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails
+     * @var \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails
      */
     protected $model;
 
@@ -38,7 +38,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getOrderId()
+     * @covers \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails::getOrderId()
      */
     public function testOrderId()
     {
@@ -46,7 +46,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getShippingDetails()
+     * @covers \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails::getShippingDetails()
      */
     public function testShippingDetails()
     {
@@ -54,7 +54,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionSummary()
+     * @covers \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionSummary()
      */
     public function testTransactionSummary()
     {
@@ -62,7 +62,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionLogHistory()
+     * @covers \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails::getTransactionLogHistory()
      */
     public function testTransactionLogHistory()
     {
@@ -70,7 +70,7 @@ class ResponseGetPaymentDetailsTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails::getUserDetails()
+     * @covers \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails::getUserDetails()
      */
     public function testUserDetails()
     {

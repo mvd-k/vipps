@@ -1,21 +1,21 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\Address;
-use zaporylie\Vipps\Model\Payment\ShippingDetailsRequest;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\Address;
+use mvd\Vipps\Model\Payment\ShippingDetailsRequest;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 /**
  * Class ShippingDetailsRequestTest
- * @package zaporylie\Vipps\Tests\Unit\Model\Payment
- * @coversDefaultClass \zaporylie\Vipps\Model\Payment\ShippingDetailsRequest
+ * @package mvd\Vipps\Tests\Unit\Model\Payment
+ * @coversDefaultClass \mvd\Vipps\Model\Payment\ShippingDetailsRequest
  */
 class ShippingDetailsRequestTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ShippingDetailsRequest
+     * @var \mvd\Vipps\Model\Payment\ShippingDetailsRequest
      */
     protected $model;
 

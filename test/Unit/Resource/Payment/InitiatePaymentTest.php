@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace mvd\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\RequestInitiatePayment;
-use zaporylie\Vipps\Model\Payment\ResponseInitiatePayment;
-use zaporylie\Vipps\Resource\Payment\InitiatePayment;
-use zaporylie\Vipps\Resource\HttpMethod;
+use mvd\Vipps\Model\Payment\RequestInitiatePayment;
+use mvd\Vipps\Model\Payment\ResponseInitiatePayment;
+use mvd\Vipps\Resource\Payment\InitiatePayment;
+use mvd\Vipps\Resource\HttpMethod;
 
 class InitiatePaymentTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\InitiatePayment
+     * @var \mvd\Vipps\Resource\Payment\InitiatePayment
      */
     protected $resource;
 
@@ -36,8 +36,8 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::__construct()
+     * @covers \mvd\Vipps\Resource\Payment\InitiatePayment::getBody()
+     * @covers \mvd\Vipps\Resource\Payment\InitiatePayment::__construct()
      */
     public function testBody()
     {
@@ -47,7 +47,7 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getMethod()
+     * @covers \mvd\Vipps\Resource\Payment\InitiatePayment::getMethod()
      */
     public function testMethod()
     {
@@ -55,7 +55,7 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::getPath()
+     * @covers \mvd\Vipps\Resource\Payment\InitiatePayment::getPath()
      */
     public function testPath()
     {
@@ -65,7 +65,7 @@ class InitiatePaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\InitiatePayment::call()
+     * @covers \mvd\Vipps\Resource\Payment\InitiatePayment::call()
      */
     public function testCall()
     {

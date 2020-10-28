@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -19,8 +19,8 @@ class ResponseGetOrderStatus
     protected $orderId;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionInfo
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\TransactionInfo")
+     * @var \mvd\Vipps\Model\Payment\TransactionInfo
+     * @Serializer\Type("mvd\Vipps\Model\Payment\TransactionInfo")
      */
     protected $transactionInfo;
 
@@ -37,7 +37,7 @@ class ResponseGetOrderStatus
     /**
      * Gets transactionInfo value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionInfo
+     * @return \mvd\Vipps\Model\Payment\TransactionInfo
      */
     public function getTransactionInfo()
     {

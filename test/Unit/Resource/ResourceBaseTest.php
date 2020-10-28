@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource;
+namespace mvd\Vipps\Tests\Unit\Resource;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
@@ -11,16 +11,16 @@ use Http\Promise\FulfilledPromise;
 use JMS\Serializer\Serializer;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
-use zaporylie\Vipps\Exceptions\VippsException;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\Resource\ResourceBase;
-use zaporylie\Vipps\Tests\Integration\IntegrationTestBase;
+use mvd\Vipps\Exceptions\VippsException;
+use mvd\Vipps\Resource\HttpMethod;
+use mvd\Vipps\Resource\ResourceBase;
+use mvd\Vipps\Tests\Integration\IntegrationTestBase;
 
 class ResourceBaseTest extends ResourceTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\ResourceBase
+     * @var \mvd\Vipps\Resource\ResourceBase
      */
     protected $resourceBase;
 
@@ -56,8 +56,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::__construct()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getSerializer()
+     * @covers \mvd\Vipps\Resource\ResourceBase::__construct()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getSerializer()
      */
     public function testSerializer()
     {
@@ -68,8 +68,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::__construct()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getHeaders()
+     * @covers \mvd\Vipps\Resource\ResourceBase::__construct()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getHeaders()
      */
     public function testHeaders()
     {
@@ -80,7 +80,7 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getMethod()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getMethod()
      */
     public function testMethod()
     {
@@ -96,7 +96,7 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getPath()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getPath()
      */
     public function testPath()
     {
@@ -112,7 +112,7 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getBody()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getBody()
      */
     public function testBody()
     {
@@ -120,7 +120,7 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getPath()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getPath()
      */
     public function testId()
     {
@@ -137,7 +137,7 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getUri()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getUri()
      */
     public function testUri()
     {
@@ -146,10 +146,10 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleRequest()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::getRequest()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleResponse()
+     * @covers \mvd\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleRequest()
+     * @covers \mvd\Vipps\Resource\ResourceBase::getRequest()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleResponse()
      */
     public function testHttpSuccess()
     {
@@ -178,8 +178,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleResponse()
+     * @covers \mvd\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleResponse()
      */
     public function testHttpErrorsResponse()
     {
@@ -196,8 +196,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleResponse()
+     * @covers \mvd\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleResponse()
      */
     public function testHttpErrorsResponseWithException()
     {
@@ -220,8 +220,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleResponse()
+     * @covers \mvd\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleResponse()
      */
     public function testHttpServerError()
     {
@@ -238,8 +238,8 @@ class ResourceBaseTest extends ResourceTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::makeCall()
-     * @covers \zaporylie\Vipps\Resource\ResourceBase::handleResponse()
+     * @covers \mvd\Vipps\Resource\ResourceBase::makeCall()
+     * @covers \mvd\Vipps\Resource\ResourceBase::handleResponse()
      */
     public function testHttpSuccessWithErrorInBody()
     {

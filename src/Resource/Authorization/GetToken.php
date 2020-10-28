@@ -1,11 +1,11 @@
 <?php
 
-namespace zaporylie\Vipps\Resource\Authorization;
+namespace mvd\Vipps\Resource\Authorization;
 
-use zaporylie\Vipps\Model\Authorization\ResponseGetToken;
-use zaporylie\Vipps\Resource\ResourceBase;
-use zaporylie\Vipps\Resource\HttpMethod;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Model\Authorization\ResponseGetToken;
+use mvd\Vipps\Resource\ResourceBase;
+use mvd\Vipps\Resource\HttpMethod;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class GetToken
@@ -16,7 +16,7 @@ class GetToken extends ResourceBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod;
+     * @var \mvd\Vipps\Resource\HttpMethod;
      */
     protected $method = HttpMethod::POST;
 
@@ -28,7 +28,7 @@ class GetToken extends ResourceBase
     /**
      * GetToken constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \mvd\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      * @param string $client_secret
      */
@@ -42,12 +42,12 @@ class GetToken extends ResourceBase
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @return \mvd\Vipps\Model\Authorization\ResponseGetToken
      */
     public function call()
     {
         $response = $this->makeCall();
-        /** @var \zaporylie\Vipps\Model\Authorization\ResponseGetToken $responseObject */
+        /** @var \mvd\Vipps\Model\Authorization\ResponseGetToken $responseObject */
         $responseObject = $this
             ->getSerializer()
             ->deserialize(

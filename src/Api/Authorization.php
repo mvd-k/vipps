@@ -1,8 +1,8 @@
 <?php
 
-namespace zaporylie\Vipps\Api;
+namespace mvd\Vipps\Api;
 
-use zaporylie\Vipps\Resource\Authorization\GetToken;
+use mvd\Vipps\Resource\Authorization\GetToken;
 
 class Authorization extends ApiBase implements AuthorizationInterface
 {
@@ -10,14 +10,14 @@ class Authorization extends ApiBase implements AuthorizationInterface
     /**
      * {@inheritdoc}
      *
-     * @return \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @return \mvd\Vipps\Model\Authorization\ResponseGetToken
      */
     public function getToken($client_secret)
     {
         // Initiate GetToken resource.
         $resource = new GetToken($this->app, $this->getSubscriptionKey(), $client_secret);
 
-        /** @var \zaporylie\Vipps\Model\Authorization\ResponseGetToken $response */
+        /** @var \mvd\Vipps\Model\Authorization\ResponseGetToken $response */
         $response = $resource->call();
 
         // Save token on Client for future use.

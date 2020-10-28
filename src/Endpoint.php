@@ -6,7 +6,7 @@
  * Abstract connection base class.
  */
 
-namespace zaporylie\Vipps;
+namespace mvd\Vipps;
 
 use Eloquent\Enumeration\AbstractMultiton;
 use Http\Discovery\UriFactoryDiscovery;

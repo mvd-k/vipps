@@ -1,24 +1,24 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit;
+namespace mvd\Vipps\Tests\Unit;
 
 use Http\Client\HttpClient;
 use Http\Message\MessageFactory;
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Authentication\TokenMemoryCacheStorage;
-use zaporylie\Vipps\Authentication\TokenStorageInterface;
-use zaporylie\Vipps\Client;
-use zaporylie\Vipps\ClientInterface;
-use zaporylie\Vipps\Endpoint;
-use zaporylie\Vipps\EndpointInterface;
-use zaporylie\Vipps\Exceptions\Client\InvalidArgumentException;
-use zaporylie\Vipps\Tests\Unit\Authentication\TestTokenStorage;
+use mvd\Vipps\Authentication\TokenMemoryCacheStorage;
+use mvd\Vipps\Authentication\TokenStorageInterface;
+use mvd\Vipps\Client;
+use mvd\Vipps\ClientInterface;
+use mvd\Vipps\Endpoint;
+use mvd\Vipps\EndpointInterface;
+use mvd\Vipps\Exceptions\Client\InvalidArgumentException;
+use mvd\Vipps\Tests\Unit\Authentication\TestTokenStorage;
 
 class ClientTest extends TestCase
 {
 
     /**
-     * @var \zaporylie\Vipps\ClientInterface
+     * @var \mvd\Vipps\ClientInterface
      */
     protected $client;
 
@@ -33,8 +33,8 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::getClientId()
-     * @covers \zaporylie\Vipps\Client::setClientId()
+     * @covers \mvd\Vipps\Client::getClientId()
+     * @covers \mvd\Vipps\Client::setClientId()
      */
     public function testClientId()
     {
@@ -45,8 +45,8 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::getEndpoint()
-     * @covers \zaporylie\Vipps\Client::setEndpoint()
+     * @covers \mvd\Vipps\Client::getEndpoint()
+     * @covers \mvd\Vipps\Client::setEndpoint()
      */
     public function testEndpoint()
     {
@@ -58,8 +58,8 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::getTokenStorage()
-     * @covers \zaporylie\Vipps\Client::setTokenStorage()
+     * @covers \mvd\Vipps\Client::getTokenStorage()
+     * @covers \mvd\Vipps\Client::setTokenStorage()
      */
     public function testTokenStorage()
     {
@@ -68,9 +68,9 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::getHttpClient()
-     * @covers \zaporylie\Vipps\Client::setHttpClient()
-     * @covers \zaporylie\Vipps\Client::httpClientDiscovery()
+     * @covers \mvd\Vipps\Client::getHttpClient()
+     * @covers \mvd\Vipps\Client::setHttpClient()
+     * @covers \mvd\Vipps\Client::httpClientDiscovery()
      */
     public function testHttpClient()
     {
@@ -82,7 +82,7 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::getMessageFactory()
+     * @covers \mvd\Vipps\Client::getMessageFactory()
      */
     public function testGetMessageFactory()
     {
@@ -90,7 +90,7 @@ class ClientTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Client::__construct()
+     * @covers \mvd\Vipps\Client::__construct()
      */
     public function testConstruct()
     {

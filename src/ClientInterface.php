@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps;
+namespace mvd\Vipps;
 
-use zaporylie\Vipps\Authentication\TokenStorageInterface;
+use mvd\Vipps\Authentication\TokenStorageInterface;
 
 interface ClientInterface
 {
     /**
-     * @return \zaporylie\Vipps\Authentication\TokenStorageInterface
+     * @return \mvd\Vipps\Authentication\TokenStorageInterface
      */
     public function getTokenStorage();
 
     /**
-     * @param \zaporylie\Vipps\Authentication\TokenStorageInterface $tokenStorage
+     * @param \mvd\Vipps\Authentication\TokenStorageInterface $tokenStorage
      *
      * @return $this
      */
@@ -37,14 +37,14 @@ interface ClientInterface
     /**
      * Gets connection value.
      *
-     * @return \zaporylie\Vipps\EndpointInterface
+     * @return \mvd\Vipps\EndpointInterface
      */
     public function getEndpoint();
 
     /**
      * Sets connection variable.
      *
-     * @param \zaporylie\Vipps\EndpointInterface $endpoint
+     * @param \mvd\Vipps\EndpointInterface $endpoint
      *
      * @return $this
      */

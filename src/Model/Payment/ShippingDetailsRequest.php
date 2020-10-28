@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -8,8 +8,8 @@ class ShippingDetailsRequest
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\Address
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\Address")
+     * @var \mvd\Vipps\Model\Payment\Address
+     * @Serializer\Type("mvd\Vipps\Model\Payment\Address")
      */
     protected $address;
 
@@ -32,7 +32,7 @@ class ShippingDetailsRequest
     protected $shippingMethodId;
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\Address
+     * @return \mvd\Vipps\Model\Payment\Address
      */
     public function getAddress()
     {

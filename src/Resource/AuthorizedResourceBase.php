@@ -1,8 +1,8 @@
 <?php
 
-namespace zaporylie\Vipps\Resource;
+namespace mvd\Vipps\Resource;
 
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class AuthorizedResourceBase

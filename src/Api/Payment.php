@@ -1,22 +1,22 @@
 <?php
 
-namespace zaporylie\Vipps\Api;
+namespace mvd\Vipps\Api;
 
-use zaporylie\Vipps\Exceptions\Api\InvalidArgumentException;
-use zaporylie\Vipps\Model\Payment\CustomerInfo;
-use zaporylie\Vipps\Model\Payment\MerchantInfo;
-use zaporylie\Vipps\Model\Payment\RequestCancelPayment;
-use zaporylie\Vipps\Model\Payment\RequestCapturePayment;
-use zaporylie\Vipps\Model\Payment\RequestInitiatePayment;
-use zaporylie\Vipps\Model\Payment\RequestRefundPayment;
-use zaporylie\Vipps\Model\Payment\Transaction;
-use zaporylie\Vipps\Resource\Payment\CancelPayment;
-use zaporylie\Vipps\Resource\Payment\CapturePayment;
-use zaporylie\Vipps\Resource\Payment\GetOrderStatus;
-use zaporylie\Vipps\Resource\Payment\GetPaymentDetails;
-use zaporylie\Vipps\Resource\Payment\InitiatePayment;
-use zaporylie\Vipps\Resource\Payment\RefundPayment;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Exceptions\Api\InvalidArgumentException;
+use mvd\Vipps\Model\Payment\CustomerInfo;
+use mvd\Vipps\Model\Payment\MerchantInfo;
+use mvd\Vipps\Model\Payment\RequestCancelPayment;
+use mvd\Vipps\Model\Payment\RequestCapturePayment;
+use mvd\Vipps\Model\Payment\RequestInitiatePayment;
+use mvd\Vipps\Model\Payment\RequestRefundPayment;
+use mvd\Vipps\Model\Payment\Transaction;
+use mvd\Vipps\Resource\Payment\CancelPayment;
+use mvd\Vipps\Resource\Payment\CapturePayment;
+use mvd\Vipps\Resource\Payment\GetOrderStatus;
+use mvd\Vipps\Resource\Payment\GetPaymentDetails;
+use mvd\Vipps\Resource\Payment\InitiatePayment;
+use mvd\Vipps\Resource\Payment\RefundPayment;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class Payment
@@ -62,7 +62,7 @@ class Payment extends ApiBase implements PaymentInterface
      *
      * Payments API needs one extra param - merchant serial number.
      *
-     * @param \zaporylie\Vipps\VippsInterface $app
+     * @param \mvd\Vipps\VippsInterface $app
      * @param string $subscription_key
      * @param $merchant_serial_number
      * @param $custom_path
@@ -95,7 +95,7 @@ class Payment extends ApiBase implements PaymentInterface
             );
         $resource = new CancelPayment($this->app, $this->getSubscriptionKey(), $order_id, $request);
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseCancelPayment $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseCancelPayment $response */
         $response = $resource->call();
         return $response;
     }
@@ -121,7 +121,7 @@ class Payment extends ApiBase implements PaymentInterface
         }
         $resource = new CapturePayment($this->app, $this->getSubscriptionKey(), $order_id, $request);
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseCapturePayment $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseCapturePayment $response */
         $response = $resource->call();
         return $response;
     }
@@ -139,7 +139,7 @@ class Payment extends ApiBase implements PaymentInterface
             $order_id
         );
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseGetOrderStatus $response */
         $response = $resource->call();
         return $response;
     }
@@ -157,7 +157,7 @@ class Payment extends ApiBase implements PaymentInterface
             $order_id
         );
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails $response */
         $response = $resource->call();
         return $response;
     }
@@ -224,7 +224,7 @@ class Payment extends ApiBase implements PaymentInterface
         // to make a call.
         $resource = new InitiatePayment($this->app, $this->getSubscriptionKey(), $request);
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseInitiatePayment $response */
         $response = $resource->call();
         return $response;
     }
@@ -252,7 +252,7 @@ class Payment extends ApiBase implements PaymentInterface
         // Create a resource.
         $resource = new RefundPayment($this->app, $this->getSubscriptionKey(), $order_id, $request);
         $resource->setPath(str_replace('ecomm', $this->customPath, $resource->getPath()));
-        /** @var \zaporylie\Vipps\Model\Payment\ResponseRefundPayment $response */
+        /** @var \mvd\Vipps\Model\Payment\ResponseRefundPayment $response */
         $response = $resource->call();
         return $response;
     }

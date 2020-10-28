@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Api;
+namespace mvd\Vipps\Tests\Unit\Api;
 
 use PHPUnit\Framework\TestCase;
-use zaporylie\Vipps\Api\Payment;
-use zaporylie\Vipps\Exceptions\Api\InvalidArgumentException;
-use zaporylie\Vipps\Model\Payment\RequestCancelPayment;
-use zaporylie\Vipps\Resource\Payment\CancelPayment;
-use zaporylie\Vipps\Vipps;
+use mvd\Vipps\Api\Payment;
+use mvd\Vipps\Exceptions\Api\InvalidArgumentException;
+use mvd\Vipps\Model\Payment\RequestCancelPayment;
+use mvd\Vipps\Resource\Payment\CancelPayment;
+use mvd\Vipps\Vipps;
 
 class PaymentTest extends TestCase
 {
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getMerchantSerialNumber()
-     * @covers \zaporylie\Vipps\Api\Payment::__construct()
+     * @covers \mvd\Vipps\Api\Payment::getMerchantSerialNumber()
+     * @covers \mvd\Vipps\Api\Payment::__construct()
      */
     public function testMerchantSerialNumber()
     {
@@ -27,8 +27,8 @@ class PaymentTest extends TestCase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Api\Payment::getCustomPath()
-     * @covers \zaporylie\Vipps\Api\Payment::__construct()
+     * @covers \mvd\Vipps\Api\Payment::getCustomPath()
+     * @covers \mvd\Vipps\Api\Payment::__construct()
      */
     public function testCustomPath()
     {

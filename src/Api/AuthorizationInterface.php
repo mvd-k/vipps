@@ -6,7 +6,7 @@
  * Time: 14:54
  */
 
-namespace zaporylie\Vipps\Api;
+namespace mvd\Vipps\Api;
 
 interface AuthorizationInterface
 {
@@ -14,7 +14,7 @@ interface AuthorizationInterface
     /**
      * @param string $client_secret
      *
-     * @return \zaporylie\Vipps\Model\Authorization\ResponseGetToken
+     * @return \mvd\Vipps\Model\Authorization\ResponseGetToken
      */
     public function getToken($client_secret);
 }

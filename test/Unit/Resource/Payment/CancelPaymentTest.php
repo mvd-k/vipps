@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace mvd\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\RequestCancelPayment;
-use zaporylie\Vipps\Model\Payment\ResponseCancelPayment;
-use zaporylie\Vipps\Resource\Payment\CancelPayment;
-use zaporylie\Vipps\Resource\HttpMethod;
+use mvd\Vipps\Model\Payment\RequestCancelPayment;
+use mvd\Vipps\Model\Payment\ResponseCancelPayment;
+use mvd\Vipps\Resource\Payment\CancelPayment;
+use mvd\Vipps\Resource\HttpMethod;
 
 class CancelPaymentTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\CancelPayment
+     * @var \mvd\Vipps\Resource\Payment\CancelPayment
      */
     protected $resource;
 
@@ -36,8 +36,8 @@ class CancelPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CancelPayment::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\CancelPayment::__construct()
+     * @covers \mvd\Vipps\Resource\Payment\CancelPayment::getBody()
+     * @covers \mvd\Vipps\Resource\Payment\CancelPayment::__construct()
      */
     public function testBody()
     {
@@ -47,7 +47,7 @@ class CancelPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CancelPayment::getMethod()
+     * @covers \mvd\Vipps\Resource\Payment\CancelPayment::getMethod()
      */
     public function testMethod()
     {
@@ -55,7 +55,7 @@ class CancelPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CancelPayment::getPath()
+     * @covers \mvd\Vipps\Resource\Payment\CancelPayment::getPath()
      */
     public function testPath()
     {
@@ -65,7 +65,7 @@ class CancelPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\CancelPayment::call()
+     * @covers \mvd\Vipps\Resource\Payment\CancelPayment::call()
      */
     public function testCall()
     {

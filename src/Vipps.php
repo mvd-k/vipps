@@ -6,10 +6,10 @@
  * Vipps client handles all requests, has built in factories for all resources.
  */
 
-namespace zaporylie\Vipps;
+namespace mvd\Vipps;
 
-use zaporylie\Vipps\Api\Authorization;
-use zaporylie\Vipps\Api\Payment;
+use mvd\Vipps\Api\Authorization;
+use mvd\Vipps\Api\Payment;
 
 /**
  * Class Vipps
@@ -19,14 +19,14 @@ class Vipps implements VippsInterface
 {
 
     /**
-     * @var \zaporylie\Vipps\ClientInterface
+     * @var \mvd\Vipps\ClientInterface
      */
     protected $client;
 
     /**
      * Vipps constructor.
      *
-     * @param \zaporylie\Vipps\ClientInterface $client
+     * @param \mvd\Vipps\ClientInterface $client
      */
     public function __construct(ClientInterface $client)
     {
@@ -46,7 +46,7 @@ class Vipps implements VippsInterface
      * @param string $merchant_serial_number
      * @param string $custom_path
      *
-     * @return \zaporylie\Vipps\Api\Payment
+     * @return \mvd\Vipps\Api\Payment
      */
     public function payment($subscription_key, $merchant_serial_number, $custom_path = 'ecomm')
     {
@@ -56,7 +56,7 @@ class Vipps implements VippsInterface
     /**
      * @param string $subscription_key
      *
-     * @return \zaporylie\Vipps\Api\Authorization
+     * @return \mvd\Vipps\Api\Authorization
      */
     public function authorization($subscription_key)
     {

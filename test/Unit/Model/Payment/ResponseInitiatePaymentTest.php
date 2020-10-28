@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\RequestInitiatePayment;
-use zaporylie\Vipps\Model\Payment\ResponseInitiatePayment;
-use zaporylie\Vipps\Model\Payment\TransactionInfo;
-use zaporylie\Vipps\Model\Payment\TransactionSummary;
-use zaporylie\Vipps\Resource\Payment\InitiatePayment;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\RequestInitiatePayment;
+use mvd\Vipps\Model\Payment\ResponseInitiatePayment;
+use mvd\Vipps\Model\Payment\TransactionInfo;
+use mvd\Vipps\Model\Payment\TransactionSummary;
+use mvd\Vipps\Resource\Payment\InitiatePayment;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class ResponseInitiatePaymentTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment
+     * @var \mvd\Vipps\Model\Payment\ResponseInitiatePayment
      */
     protected $model;
 
@@ -35,7 +35,7 @@ class ResponseInitiatePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment::getOrderId()
+     * @covers \mvd\Vipps\Model\Payment\ResponseInitiatePayment::getOrderId()
      */
     public function testOrderId()
     {
@@ -43,7 +43,7 @@ class ResponseInitiatePaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment::getURL()
+     * @covers \mvd\Vipps\Model\Payment\ResponseInitiatePayment::getURL()
      */
     public function testURL()
     {

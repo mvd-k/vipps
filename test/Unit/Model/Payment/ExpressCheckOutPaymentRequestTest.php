@@ -1,24 +1,24 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\CallbackErrorInfo;
-use zaporylie\Vipps\Model\Payment\ExpressCheckOutPaymentRequest;
-use zaporylie\Vipps\Model\Payment\ShippingDetailsRequest;
-use zaporylie\Vipps\Model\Payment\TransactionInfo;
-use zaporylie\Vipps\Model\Payment\UserDetails;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\CallbackErrorInfo;
+use mvd\Vipps\Model\Payment\ExpressCheckOutPaymentRequest;
+use mvd\Vipps\Model\Payment\ShippingDetailsRequest;
+use mvd\Vipps\Model\Payment\TransactionInfo;
+use mvd\Vipps\Model\Payment\UserDetails;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 /**
  * Class ExpressCheckOutPaymentRequestTest
- * @package zaporylie\Vipps\Tests\Unit\Model\Payment
- * @coversDefaultClass \zaporylie\Vipps\Model\Payment\ExpressCheckOutPaymentRequest
+ * @package mvd\Vipps\Tests\Unit\Model\Payment
+ * @coversDefaultClass \mvd\Vipps\Model\Payment\ExpressCheckOutPaymentRequest
  */
 class ExpressCheckOutPaymentRequestTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\ExpressCheckOutPaymentRequest
+     * @var \mvd\Vipps\Model\Payment\ExpressCheckOutPaymentRequest
      */
     protected $model;
 

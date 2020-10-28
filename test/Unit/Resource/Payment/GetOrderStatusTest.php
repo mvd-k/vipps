@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace mvd\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus;
-use zaporylie\Vipps\Resource\Payment\GetOrderStatus;
-use zaporylie\Vipps\Resource\HttpMethod;
+use mvd\Vipps\Model\Payment\ResponseGetOrderStatus;
+use mvd\Vipps\Resource\Payment\GetOrderStatus;
+use mvd\Vipps\Resource\HttpMethod;
 
 class GetOrderStatusTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\GetOrderStatus
+     * @var \mvd\Vipps\Resource\Payment\GetOrderStatus
      */
     protected $resource;
 
@@ -39,8 +39,8 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::__construct()
+     * @covers \mvd\Vipps\Resource\Payment\GetOrderStatus::getBody()
+     * @covers \mvd\Vipps\Resource\Payment\GetOrderStatus::__construct()
      */
     public function testBody()
     {
@@ -48,7 +48,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getMethod()
+     * @covers \mvd\Vipps\Resource\Payment\GetOrderStatus::getMethod()
      */
     public function testMethod()
     {
@@ -56,7 +56,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::getPath()
+     * @covers \mvd\Vipps\Resource\Payment\GetOrderStatus::getPath()
      */
     public function testPath()
     {
@@ -72,7 +72,7 @@ class GetOrderStatusTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\GetOrderStatus::call()
+     * @covers \mvd\Vipps\Resource\Payment\GetOrderStatus::call()
      */
     public function testCall()
     {

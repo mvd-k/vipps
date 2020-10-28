@@ -1,20 +1,20 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\CallbackErrorInfo;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\CallbackErrorInfo;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 /**
  * Class CallbackErrorInfoTest
- * @package zaporylie\Vipps\Tests\Unit\Model\Payment
- * @coversDefaultClass \zaporylie\Vipps\Model\Payment\CallbackErrorInfo
+ * @package mvd\Vipps\Tests\Unit\Model\Payment
+ * @coversDefaultClass \mvd\Vipps\Model\Payment\CallbackErrorInfo
  */
 class CallbackErrorInfoTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\CallbackErrorInfo
+     * @var \mvd\Vipps\Model\Payment\CallbackErrorInfo
      */
     protected $model;
 

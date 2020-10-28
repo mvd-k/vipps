@@ -6,13 +6,13 @@
  * Provides and handles vipps exception.
  */
 
-namespace zaporylie\Vipps\Exceptions;
+namespace mvd\Vipps\Exceptions;
 
 use JMS\Serializer\Serializer;
 use Psr\Http\Message\ResponseInterface;
-use zaporylie\Vipps\Model\Error\AuthorizationError;
-use zaporylie\Vipps\Model\Error\ErrorInterface;
-use zaporylie\Vipps\Model\Error\PaymentError;
+use mvd\Vipps\Model\Error\AuthorizationError;
+use mvd\Vipps\Model\Error\ErrorInterface;
+use mvd\Vipps\Model\Error\PaymentError;
 
 /**
  * Class VippsException
@@ -22,7 +22,7 @@ class VippsException extends \Exception
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Error\ErrorInterface|null
+     * @var \mvd\Vipps\Model\Error\ErrorInterface|null
      */
     protected $error;
 
@@ -32,7 +32,7 @@ class VippsException extends \Exception
      * @param string $message
      * @param int $code
      * @param \Exception|null $previous
-     * @param \zaporylie\Vipps\Model\Error\ErrorInterface|null $error
+     * @param \mvd\Vipps\Model\Error\ErrorInterface|null $error
      */
     public function __construct($message = '', $code = 0, \Exception $previous = null, ErrorInterface $error = null)
     {
@@ -79,7 +79,7 @@ class VippsException extends \Exception
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Error\ErrorInterface|null
+     * @return \mvd\Vipps\Model\Error\ErrorInterface|null
      */
     public function getError()
     {
@@ -93,7 +93,7 @@ class VippsException extends \Exception
      * @param \JMS\Serializer\Serializer|null $serializer
      * @param bool $force
      *
-     * @return null|\zaporylie\Vipps\Exceptions\VippsException
+     * @return null|\mvd\Vipps\Exceptions\VippsException
      */
     public static function createFromResponse(
         ResponseInterface $response,

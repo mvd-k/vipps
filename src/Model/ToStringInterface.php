@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model;
+namespace mvd\Vipps\Model;
 
 use JMS\Serializer\SerializerInterface;
 

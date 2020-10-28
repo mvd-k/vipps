@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
 use JMS\Serializer\Annotation as Serializer;
 
@@ -19,26 +19,26 @@ class ResponseGetPaymentDetails
     protected $orderId;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\PaymentShippingDetails
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\PaymentShippingDetails")
+     * @var \mvd\Vipps\Model\Payment\PaymentShippingDetails
+     * @Serializer\Type("mvd\Vipps\Model\Payment\PaymentShippingDetails")
      */
     protected $shippingDetails;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionSummary
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\TransactionSummary")
+     * @var \mvd\Vipps\Model\Payment\TransactionSummary
+     * @Serializer\Type("mvd\Vipps\Model\Payment\TransactionSummary")
      */
     protected $transactionSummary;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\TransactionLog[]
-     * @Serializer\Type("array<zaporylie\Vipps\Model\Payment\TransactionLog>")
+     * @var \mvd\Vipps\Model\Payment\TransactionLog[]
+     * @Serializer\Type("array<mvd\Vipps\Model\Payment\TransactionLog>")
      */
     protected $transactionLogHistory;
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\UserDetails
-     * @Serializer\Type("zaporylie\Vipps\Model\Payment\UserDetails")
+     * @var \mvd\Vipps\Model\Payment\UserDetails
+     * @Serializer\Type("mvd\Vipps\Model\Payment\UserDetails")
      */
     protected $userDetails;
 
@@ -53,7 +53,7 @@ class ResponseGetPaymentDetails
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\PaymentShippingDetails
+     * @return \mvd\Vipps\Model\Payment\PaymentShippingDetails
      */
     public function getShippingDetails()
     {
@@ -63,7 +63,7 @@ class ResponseGetPaymentDetails
     /**
      * Gets transactionSummary value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionSummary
+     * @return \mvd\Vipps\Model\Payment\TransactionSummary
      */
     public function getTransactionSummary()
     {
@@ -73,7 +73,7 @@ class ResponseGetPaymentDetails
     /**
      * Gets transactionLogHistory value.
      *
-     * @return \zaporylie\Vipps\Model\Payment\TransactionLog[]
+     * @return \mvd\Vipps\Model\Payment\TransactionLog[]
      */
     public function getTransactionLogHistory()
     {
@@ -81,7 +81,7 @@ class ResponseGetPaymentDetails
     }
 
     /**
-     * @return \zaporylie\Vipps\Model\Payment\UserDetails
+     * @return \mvd\Vipps\Model\Payment\UserDetails
      */
     public function getUserDetails()
     {

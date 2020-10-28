@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Api;
+namespace mvd\Vipps\Api;
 
 /**
  * Interface PaymentInterface
@@ -14,7 +14,7 @@ interface PaymentInterface
      * @param string $order_id
      * @param string $text
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCancelPayment
+     * @return \mvd\Vipps\Model\Payment\ResponseCancelPayment
      */
     public function cancelPayment($order_id, $text);
 
@@ -23,24 +23,24 @@ interface PaymentInterface
      * @param string $text
      * @param int $amount
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseCapturePayment
+     * @return \mvd\Vipps\Model\Payment\ResponseCapturePayment
      */
     public function capturePayment($order_id, $text, $amount = 0);
 
     /**
      * @param string $order_id
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetOrderStatus
+     * @return \mvd\Vipps\Model\Payment\ResponseGetOrderStatus
      *
      * @deprecated Get order status was deprecated and can be removed in version 3.0.
-     * @see \zaporylie\Vipps\Resource\Payment\GetOrderStatus
+     * @see \mvd\Vipps\Resource\Payment\GetOrderStatus
      */
     public function getOrderStatus($order_id);
 
     /**
      * @param string $order_id
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseGetPaymentDetails
+     * @return \mvd\Vipps\Model\Payment\ResponseGetPaymentDetails
      */
     public function getPaymentDetails($order_id);
 
@@ -53,7 +53,7 @@ interface PaymentInterface
      * @param $options array
      *   Optional values.
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseInitiatePayment
+     * @return \mvd\Vipps\Model\Payment\ResponseInitiatePayment
      *
      * @see https://vippsas.github.io/vipps-ecom-api/#/Vipps_eCom_API/initiatePaymentV3UsingPOST
      */
@@ -64,7 +64,7 @@ interface PaymentInterface
      * @param string $text
      * @param int $amount
      *
-     * @return \zaporylie\Vipps\Model\Payment\ResponseRefundPayment
+     * @return \mvd\Vipps\Model\Payment\ResponseRefundPayment
      */
     public function refundPayment($order_id, $text, $amount = 0);
 }

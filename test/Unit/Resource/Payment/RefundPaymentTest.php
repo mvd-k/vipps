@@ -1,19 +1,19 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Resource\Payment;
+namespace mvd\Vipps\Tests\Unit\Resource\Payment;
 
 use GuzzleHttp\Psr7\Response;
 use function GuzzleHttp\Psr7\stream_for;
-use zaporylie\Vipps\Model\Payment\RequestRefundPayment;
-use zaporylie\Vipps\Model\Payment\ResponseRefundPayment;
-use zaporylie\Vipps\Resource\Payment\RefundPayment;
-use zaporylie\Vipps\Resource\HttpMethod;
+use mvd\Vipps\Model\Payment\RequestRefundPayment;
+use mvd\Vipps\Model\Payment\ResponseRefundPayment;
+use mvd\Vipps\Resource\Payment\RefundPayment;
+use mvd\Vipps\Resource\HttpMethod;
 
 class RefundPaymentTest extends PaymentResourceBaseTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Resource\Payment\RefundPayment
+     * @var \mvd\Vipps\Resource\Payment\RefundPayment
      */
     protected $resource;
 
@@ -36,8 +36,8 @@ class RefundPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\RefundPayment::getBody()
-     * @covers \zaporylie\Vipps\Resource\Payment\RefundPayment::__construct()
+     * @covers \mvd\Vipps\Resource\Payment\RefundPayment::getBody()
+     * @covers \mvd\Vipps\Resource\Payment\RefundPayment::__construct()
      */
     public function testBody()
     {
@@ -47,7 +47,7 @@ class RefundPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\RefundPayment::getMethod()
+     * @covers \mvd\Vipps\Resource\Payment\RefundPayment::getMethod()
      */
     public function testMethod()
     {
@@ -55,7 +55,7 @@ class RefundPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\RefundPayment::getPath()
+     * @covers \mvd\Vipps\Resource\Payment\RefundPayment::getPath()
      */
     public function testPath()
     {
@@ -65,7 +65,7 @@ class RefundPaymentTest extends PaymentResourceBaseTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Resource\Payment\RefundPayment::call()
+     * @covers \mvd\Vipps\Resource\Payment\RefundPayment::call()
      */
     public function testCall()
     {

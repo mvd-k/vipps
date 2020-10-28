@@ -1,15 +1,15 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit;
+namespace mvd\Vipps\Tests\Unit;
 
 use Eloquent\Enumeration\Exception\UndefinedMemberException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\UriInterface;
-use zaporylie\Vipps\Endpoint;
-use zaporylie\Vipps\EndpointInterface;
+use mvd\Vipps\Endpoint;
+use mvd\Vipps\EndpointInterface;
 
 /**
- * @coversDefaultClass \zaporylie\Vipps\Endpoint
+ * @coversDefaultClass \mvd\Vipps\Endpoint
  */
 class EndpointTest extends TestCase
 {

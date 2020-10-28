@@ -6,7 +6,7 @@
  * Abstract resource base class.
  */
 
-namespace zaporylie\Vipps\Resource;
+namespace mvd\Vipps\Resource;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Http\Client\Exception\HttpException;
@@ -14,8 +14,8 @@ use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
 use JMS\Serializer\SerializerBuilder;
 use Psr\Http\Message\RequestInterface;
-use zaporylie\Vipps\Exceptions\VippsException;
-use zaporylie\Vipps\VippsInterface;
+use mvd\Vipps\Exceptions\VippsException;
+use mvd\Vipps\VippsInterface;
 
 /**
  * Class ResourceBase
@@ -50,7 +50,7 @@ abstract class ResourceBase implements ResourceInterface, SerializableInterface
     protected $path;
 
     /**
-     * @var \zaporylie\Vipps\Resource\HttpMethod
+     * @var \mvd\Vipps\Resource\HttpMethod
      */
     protected $method;
 
@@ -62,7 +62,7 @@ abstract class ResourceBase implements ResourceInterface, SerializableInterface
     /**
      * AbstractResource constructor.
      *
-     * @param \zaporylie\Vipps\VippsInterface $vipps
+     * @param \mvd\Vipps\VippsInterface $vipps
      * @param string $subscription_key
      */
     public function __construct(VippsInterface $vipps, $subscription_key)
@@ -159,7 +159,7 @@ abstract class ResourceBase implements ResourceInterface, SerializableInterface
     /**
      * @return \Psr\Http\Message\ResponseInterface
      *
-     * @throws \zaporylie\Vipps\Exceptions\VippsException
+     * @throws \mvd\Vipps\Exceptions\VippsException
      */
     protected function makeCall()
     {
@@ -219,7 +219,7 @@ abstract class ResourceBase implements ResourceInterface, SerializableInterface
      *
      * @return \Psr\Http\Message\ResponseInterface
      *
-     * @throws \zaporylie\Vipps\Exceptions\VippsException
+     * @throws \mvd\Vipps\Exceptions\VippsException
      */
     protected function handleResponse($response)
     {

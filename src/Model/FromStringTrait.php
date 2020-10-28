@@ -1,6 +1,6 @@
 <?php
 
-namespace zaporylie\Vipps\Model;
+namespace mvd\Vipps\Model;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use JMS\Serializer\SerializerInterface;

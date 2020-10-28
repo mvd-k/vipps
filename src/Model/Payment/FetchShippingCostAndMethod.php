@@ -1,12 +1,12 @@
 <?php
 
-namespace zaporylie\Vipps\Model\Payment;
+namespace mvd\Vipps\Model\Payment;
 
-use zaporylie\Vipps\Model\FromStringInterface;
-use zaporylie\Vipps\Model\FromStringTrait;
-use zaporylie\Vipps\Model\ToStringInterface;
-use zaporylie\Vipps\Model\ToStringTrait;
-use zaporylie\Vipps\Model\SupportsSerializationInterface;
+use mvd\Vipps\Model\FromStringInterface;
+use mvd\Vipps\Model\FromStringTrait;
+use mvd\Vipps\Model\ToStringInterface;
+use mvd\Vipps\Model\ToStringTrait;
+use mvd\Vipps\Model\SupportsSerializationInterface;
 use JMS\Serializer\Annotation as Serializer;
 
 class FetchShippingCostAndMethod implements FromStringInterface, ToStringInterface, SupportsSerializationInterface

@@ -1,18 +1,18 @@
 <?php
 
-namespace zaporylie\Vipps\Tests\Unit\Model\Payment;
+namespace mvd\Vipps\Tests\Unit\Model\Payment;
 
-use zaporylie\Vipps\Model\Payment\CustomerInfo;
-use zaporylie\Vipps\Model\Payment\MerchantInfo;
-use zaporylie\Vipps\Model\Payment\RequestCancelPayment;
-use zaporylie\Vipps\Model\Payment\Transaction;
-use zaporylie\Vipps\Tests\Unit\Model\ModelTestBase;
+use mvd\Vipps\Model\Payment\CustomerInfo;
+use mvd\Vipps\Model\Payment\MerchantInfo;
+use mvd\Vipps\Model\Payment\RequestCancelPayment;
+use mvd\Vipps\Model\Payment\Transaction;
+use mvd\Vipps\Tests\Unit\Model\ModelTestBase;
 
 class RequestCancelPaymentTest extends ModelTestBase
 {
 
     /**
-     * @var \zaporylie\Vipps\Model\Payment\RequestCancelPayment
+     * @var \mvd\Vipps\Model\Payment\RequestCancelPayment
      */
     protected $model;
 
@@ -26,8 +26,8 @@ class RequestCancelPaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\RequestCancelPayment::setMerchantInfo()
-     * @covers \zaporylie\Vipps\Model\Payment\RequestCancelPayment::getMerchantInfo()
+     * @covers \mvd\Vipps\Model\Payment\RequestCancelPayment::setMerchantInfo()
+     * @covers \mvd\Vipps\Model\Payment\RequestCancelPayment::getMerchantInfo()
      */
     public function testMerchantInfo()
     {
@@ -37,8 +37,8 @@ class RequestCancelPaymentTest extends ModelTestBase
     }
 
     /**
-     * @covers \zaporylie\Vipps\Model\Payment\RequestCancelPayment::setTransaction()
-     * @covers \zaporylie\Vipps\Model\Payment\RequestCancelPayment::getTransaction()
+     * @covers \mvd\Vipps\Model\Payment\RequestCancelPayment::setTransaction()
+     * @covers \mvd\Vipps\Model\Payment\RequestCancelPayment::getTransaction()
      */
     public function testTransaction()
     {
