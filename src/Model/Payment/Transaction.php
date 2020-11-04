@@ -36,7 +36,19 @@ class Transaction
      */
     protected $transactionText;
 
-    /**
+	/**
+	 * @var string
+	 * @Serializer\Type("string")
+	 */
+	protected $scope;
+
+	/**
+	 * @var bool
+	 * @Serializer\Type("bool")
+	 */
+	protected $skipLandingPage;
+
+	/**
      * @var \DateTimeInterface
      * @Serializer\Type("DateTime<'Y-m-d\TH:i:s.u\Z'>")
      */
@@ -156,4 +168,50 @@ class Transaction
         $this->transactionText = $transactionText;
         return $this;
     }
+
+	/**
+	 * Gets scope value.
+	 *
+	 * @return string
+	 */
+	public function getScope()
+	{
+		return $this->scope;
+	}
+
+	/**
+	 * Sets scope variable.
+	 *
+	 * @param string $scope
+	 *
+	 * @return $this
+	 */
+	public function setScope($scope)
+	{
+		$this->scope = $scope;
+		return $this;
+	}
+
+	/**
+	 * Gets skipLandingPage value.
+	 *
+	 * @return bool
+	 */
+	public function getSkipLandingPage()
+	{
+		return (bool)$this->skipLandingPage;
+	}
+
+	/**
+	 * Sets skipLandingPage variable.
+	 *
+	 * @param bool $skipLandingPage
+	 *
+	 * @return $this
+	 */
+	public function setSkipLandingPage($skipLandingPage)
+	{
+		$this->skipLandingPage = $skipLandingPage;
+		return $this;
+	}
 }
