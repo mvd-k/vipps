@@ -1,6 +1,6 @@
 {
     "name": "mvd/vipps",
-    "description": "Vipps by DNB PHP SDK",
+    "description": "Vipps API library",
     "type": "library",
     "keywords": ["payment"],
     "require": {
@@ -28,7 +28,7 @@
     "authors": [
         {
             "name": "Vladimir Mokliak",
-            "email": "moklyak@gmail.com"
+            "email": "mvd@mvd.in.ua"
         }
     ],
     "scripts": {
