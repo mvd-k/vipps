@@ -2,10 +2,6 @@ Vipps PHP SDK
 =====================
 [![Packagist](https://img.shields.io/packagist/v/zaporylie/vipps.svg?maxAge=3600)](https://packagist.org/packages/zaporylie/vipps)
 [![Packagist](https://img.shields.io/packagist/dt/zaporylie/vipps.svg?maxAge=3600)](https://packagist.org/packages/zaporylie/vipps)
-[![codecov](https://codecov.io/gh/zaporylie/php-vipps/branch/2.x/graph/badge.svg)](https://codecov.io/gh/zaporylie/php-vipps)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zaporylie/php-vipps/badges/quality-score.png?b=2.x)](https://scrutinizer-ci.com/g/zaporylie/php-vipps/?branch=2.x)
-[![Build Status](https://travis-ci.org/zaporylie/php-vipps.svg?branch=2.x)](https://travis-ci.org/zaporylie/php-vipps)
-[![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/paypalme/zaporylie/50)
 
 [Vipps](https://vipps.no) is a Norwegian payment service, used by more than 3 million people. 
 Vipps was originally developed by DNB, but is now a separate company, which includes BankID and BankAxept. Vipps developer resources are available on GitHub: https://github.com/vippsas
@@ -24,7 +20,7 @@ $ composer require mvd/vipps:^2.0
 ```
 
 Vipps SDK uses [PSR-7] compliant http-message plugin system, hence before you require `mvd/vipps` you must 
-add http client adapter of your choice, ex. `php-http/guzzle6-adapter` [(read more)](https://github.com/php-http/guzzle6-adapter).
+add http client adapter of your choice, ex. `php-http/guzzle7-adapter` [(read more)](https://github.com/php-http/guzzle6-adapter).
 
 ## References 
 - [SDK documentation]

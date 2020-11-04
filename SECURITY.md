@@ -9,4 +9,4 @@
 
 ## Reporting a Vulnerability
 
-If you spot any potential security vulnerability please contact me directly at jakub(at)piaseccy.pl rather than creating an issue.
+If you spot any potential security vulnerability please contact me directly at mvd(at)mvd.in.ua rather than creating an issue.
